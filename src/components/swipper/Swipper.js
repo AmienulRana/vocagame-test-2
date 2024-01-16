@@ -1,4 +1,5 @@
 import { SwipperContent } from "@/components/swipper";
+import { useState } from "react";
 import Slider from "react-slick";
 export default function Swipper() {
   const [slideActive, setSlideActive] = useState(0);
