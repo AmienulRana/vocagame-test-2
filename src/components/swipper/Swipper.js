@@ -11,6 +11,7 @@ export default function Swipper() {
     slidesToShow: 1,
     autoplay: true,
     slidesToScroll: 1,
+    nextArrow: null,
     beforeChange: (oldInde, newIndex) => {
       console.log("Slide yang aktif:", newIndex);
       setSlideActive(newIndex);

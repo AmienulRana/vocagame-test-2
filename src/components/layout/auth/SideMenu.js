@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function SideMenu() {
   return (
-    <div className="flex relative overflow-hidden flex-col justify-center items-center min-h-screen bg-white shadow-xl w-[55%]">
+    <div className="flex dark:bg-darkblue relative overflow-hidden flex-col justify-center items-center min-h-screen bg-white shadow-xl w-[55%]">
       <OvalVector />
       <Image
         src={"/images/thumbnail.png"}

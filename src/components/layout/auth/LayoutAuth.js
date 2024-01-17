@@ -7,6 +7,5 @@ export default function Layout({ children }){
         <SideMenu />
         {children}
     </section>
-
     )
 }

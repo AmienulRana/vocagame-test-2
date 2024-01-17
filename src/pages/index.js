@@ -13,6 +13,7 @@ import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 import { decryptData, encryptData } from "@/utils/crypto";
 import { useRouter } from "next/router";
+import Typhography from "@/components/commons/Typhography";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,13 +48,13 @@ export default function Home() {
   return (
     <LayoutAuth>
       <div className="flex-1">
-        <div className="px-16 flex flex-col items-center justify-center h-full bg-gray-50">
+        <div className="px-16 flex flex-col items-center justify-center h-full dark:bg-darkblue2 bg-gray-50">
           <h1 className="text-lightgreen xl:text-[64px] lg:text-[32px] font-bold">
             Silahkan Login
           </h1>
-          <p className="mt-5 text-gray-400 mb-10">
+          <Typhography className={"mt-5 mb-10"} variant={'p'}>
             Masukkan Username dan password anda untuk masuk
-          </p>
+          </Typhography>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full">
             <Controller
               name="name"
@@ -95,12 +96,12 @@ export default function Home() {
             />
             <Button text={"Masuk Sekarang"} type={"submit"} />
           </form>
-          <p className="text-gray-400">
+          <Typhography variant={'p'}>
             Belum punya akun?{" "}
             <Link href="/register" className="text-lightgreen font-bold">
               Daftar Sekarang
             </Link>
-          </p>
+          </Typhography>
         </div>
       </div>
     </LayoutAuth>

@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Cookies from 'js-cookie';
 import { encryptData } from "@/utils/crypto";
 import toast from "react-hot-toast";
+import Typhography from "@/components/commons/Typhography";
 
 
 export default function Register() {
@@ -44,7 +45,7 @@ export default function Register() {
   };
 
   return (
-    <div className="flex-1 min-h-screen flex justify-center items-center overflow-hidden relative">
+    <div className="flex-1 min-h-screen flex justify-center items-center overflow-hidden relative dark:bg-darkblue">
       <OvalVector />
       <Image
         src="/svg/logo.svg"
@@ -57,9 +58,9 @@ export default function Register() {
         <h1 className="text-lightgreen xl:text-[64px] lg:text-[32px] font-bold">
           Daftarkan Akun
         </h1>
-        <p className="mt-5 text-gray-400 mb-10">
+        <Typhography variant={'p'} className="mt-5 text-gray-400 mb-10">
           Daftar akun anda dengan mengisi form dibawah
-        </p>
+        </Typhography>
         <form onSubmit={handleSubmit(onSubmit)} className="w-full">
           <Controller
             name="name"
@@ -159,12 +160,12 @@ export default function Register() {
           />
           <Button text="Masuk Sekarang" type="submit" />
         </form>
-        <p className="text-gray-400 mb-10">
+        <Typhography variant={'p'} className="mb-10">
           Sudah punya akun?{" "}
           <Link href="/" className="text-lightgreen font-bold">
             Login Sekarang
           </Link>
-        </p>
+        </Typhography>
       </div>
       <ShapeVector />
     </div>

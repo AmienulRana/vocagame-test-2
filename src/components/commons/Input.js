@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Typhography from "./Typhography";
 
 /**
  * Input component for form fields.
@@ -20,11 +21,11 @@ export default function Input({
 }) {
   return (
     <div className="w-full mt-5">
-      <p className={`text-gray-400 font-bold ${isError && 'text-red-500'}`}>{label}</p>
+      <Typhography variant={'p'} className={`font-bold ${isError && 'text-red-500'}`}>{label}</Typhography>
       <div className="relative mt-3">
         <input
           type={type}
-          className={`2xl:px-8 2xl:py-5 px-4 py-2.5 rounded-full outline-none border w-full ${isError ? 'border-red-500' : 'border-gray-400'}`}
+          className={`2xl:px-8 2xl:py-5 px-4 py-2.5 rounded-full outline-none border w-full dark:bg-darkblue2 dark:text-white ${isError ? 'border-red-500' : 'border-gray-400'}`}
           placeholder={placeholder}
           {...restProps}
         />
