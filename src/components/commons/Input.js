@@ -15,20 +15,24 @@ export default function Input({
   Icon,
   onClickIcon,
   type = "text",
+  isError,
+  ...restProps
 }) {
   return (
     <div className="w-full mt-5">
-      <p className="text-gray-400 font-bold">{label}</p>
+      <p className={`text-gray-400 font-bold ${isError && 'text-red-500'}`}>{label}</p>
       <div className="relative mt-3">
         <input
           type={type}
-          className="2xl:px-8 2xl:py-5 px-4 py-2.5 border-gray-400 rounded-full outline-none border w-full"
+          className={`2xl:px-8 2xl:py-5 px-4 py-2.5 rounded-full outline-none border w-full ${isError ? 'border-red-500' : 'border-gray-400'}`}
           placeholder={placeholder}
+          {...restProps}
         />
         <div onClick={onClickIcon} className="absolute cursor-pointer text-xl text-gray-400 top-[50%] right-4 2xl:right-8 -translate-y-[50%]">
           {Icon && Icon}
         </div>
       </div>
+      <p className="text-red-500 text-sm mt-2">{isError}</p>
     </div>
   );
 }
@@ -39,4 +43,5 @@ Input.propTypes = {
   Icon: PropTypes.any,
   placeholder: PropTypes.string,
   onClickIcon: PropTypes.func,
+  isError: PropTypes.string
 };
