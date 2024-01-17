@@ -9,7 +9,13 @@ import PropTypes from "prop-types";
  * @returns {React.Component} The rendered component.
  */
 
-export default function Input({ label, placeholder, Icon, onClickIcon, type = 'text'  }) {
+export default function Input({
+  label,
+  placeholder,
+  Icon,
+  onClickIcon,
+  type = "text",
+}) {
   return (
     <div className="w-full mt-5">
       <p className="text-gray-400 font-bold">{label}</p>
@@ -19,9 +25,9 @@ export default function Input({ label, placeholder, Icon, onClickIcon, type = 't
           className="2xl:px-8 2xl:py-5 px-4 py-2.5 border-gray-400 rounded-full outline-none border w-full"
           placeholder={placeholder}
         />
-        {Icon && (
-            <Icon onClick={onClickIcon} className="absolute cursor-pointer text-xl text-gray-400 top-[50%] right-4 2xl:right-8 -translate-y-[50%]" />
-        )}
+        <div onClick={onClickIcon} className="absolute cursor-pointer text-xl text-gray-400 top-[50%] right-4 2xl:right-8 -translate-y-[50%]">
+          {Icon && Icon}
+        </div>
       </div>
     </div>
   );
@@ -32,5 +38,5 @@ Input.propTypes = {
   type: PropTypes.oneOf(["text", "password", "email", "number"]),
   Icon: PropTypes.any,
   placeholder: PropTypes.string,
-  onClickIcon: PropTypes.func
+  onClickIcon: PropTypes.func,
 };
