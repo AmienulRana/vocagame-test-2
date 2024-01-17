@@ -52,10 +52,10 @@ export default function Register() {
         width={100}
         height={100}
         alt="logo"
-        className="absolute top-10 left-8"
+        className="absolute md:top-10 md:left-8 top-5 left-6 md:w-24 w-16"
       />
-      <div className="px-16 max-w-[900px] w-1/2 mx-auto mt-10  flex flex-col items-center justify-center h-full">
-        <h1 className="text-lightgreen xl:text-[64px] lg:text-[32px] font-bold">
+      <div className="px-8 max-w-[900px] lg:w-1/2 md:w-[70%] w-full md:mx-auto mt-10  flex flex-col items-center justify-center h-full">
+        <h1 className="text-lightgreen xl:text-[64px] lg:text-[32px] text-[28px] font-bold">
           Daftarkan Akun
         </h1>
         <Typhography variant={'p'} className="mt-5 text-gray-400 mb-10">
@@ -160,7 +160,7 @@ export default function Register() {
           />
           <Button text="Masuk Sekarang" type="submit" />
         </form>
-        <Typhography variant={'p'} className="mb-10">
+        <Typhography variant={'p'} className="mb-10 z-50">
           Sudah punya akun?{" "}
           <Link href="/" className="text-lightgreen font-bold">
             Login Sekarang

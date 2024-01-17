@@ -46,7 +46,7 @@ export default function Profile() {
 
       <div className="flex justify-center px-12 w-full">
         <div className="bg-lightgreen dark:bg-darkblue2 max-w-[1400px] w-full rounded-xl px-5 py-5 mt-10 text-white text-center">
-          <h2 className="xl:text-5xl lg:text-3xl font-bold">
+          <h2 className="xl:text-5xl lg:text-3xl text-[28px] font-bold">
             Informasi Akun Saya
           </h2>
           <p className="mt-8 xl:w-[700px] mx-auto">
@@ -70,7 +70,7 @@ export default function Profile() {
           </div>
         </div>
         <div className="md:flex gap-10 2xl:mt-16 md:mt-10">
-          <div className="w-[20%] border-r pb-10 border-gray-300 flex md:flex-col justify-between">
+          <div className="md:w-[20%] w-full md:border-r mt-5 md:mt-0 pb-10 border-gray-300 flex md:flex-col justify-between">
             <div className="flex gap-4 items-center">
               <FaUserCircle className="text-gray-500 text-2xl" />
               <Typhography variant={"p"} className="text-lg">
