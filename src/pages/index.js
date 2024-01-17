@@ -48,11 +48,11 @@ export default function Home() {
   return (
     <LayoutAuth>
       <div className="flex-1">
-        <div className="px-16 flex flex-col items-center justify-center h-full dark:bg-darkblue2 bg-gray-50">
-          <h1 className="text-lightgreen xl:text-[64px] lg:text-[32px] font-bold">
+        <div className="md:px-16 px-8 flex flex-col items-center justify-center h-full dark:bg-darkblue2 bg-gray-50">
+          <h1 className="text-lightgreen xl:text-[64px] md:text-[32px] text-[28px] font-bold">
             Silahkan Login
           </h1>
-          <Typhography className={"mt-5 mb-10"} variant={'p'}>
+          <Typhography className={"!mt-5 mb-10"} variant={'p'}>
             Masukkan Username dan password anda untuk masuk
           </Typhography>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full">
