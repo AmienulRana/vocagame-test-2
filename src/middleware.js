@@ -12,7 +12,7 @@ export default function middleware(req) {
   }
   if (!loggedin && pathname === '/profile') {
     console.log('belum login');
-    return NextResponse.redirect(new URL('/', req.url));
+    return NextResponse.redirect(new URL('/login', req.url));
   }
 }
 

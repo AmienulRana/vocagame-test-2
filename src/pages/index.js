@@ -1,32 +1,41 @@
-import { Inter } from "next/font/google";
-import { LayoutAuth } from "@/components/layout/auth";
+import OvalVector from "@/components/commons/OvalVector";
+import ShapeVector from "@/components/commons/ShapeVector";
+import Image from "next/image";
 import Link from "next/link";
 import Typhography from "@/components/commons/Typhography";
-import FormLogin from "@/components/FormLogin";
+import FormRegister from "@/components/FormRegister";
 
-const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Register() {
+  
   return (
-    <LayoutAuth>
-      <div className="flex-1">
-        <div className="md:px-16 px-8 flex flex-col items-center justify-center h-full md:dark:bg-darkblue2 dark:bg-darkblue bg-gray-50">
-          <h1 className="text-lightgreen xl:text-[64px] md:text-[32px] text-[28px] font-bold">
-            Silahkan Login
-          </h1>
-          <Typhography className={"!mt-5 mb-10"} variant={"p"}>
-            Masukkan Username dan password anda untuk masuk
-          </Typhography>
-          <FormLogin />
+    <div className="flex-1 min-h-screen flex justify-center items-center overflow-hidden relative dark:bg-darkblue">
+      <OvalVector />
+      <Image
+        src="/svg/logo.svg"
+        width={100}
+        height={100}
+        alt="logo"
+        className="absolute md:top-10 md:left-8 top-5 left-6 md:w-24 w-16"
+      />
+      <div className="px-8 max-w-[900px] lg:w-1/2 md:w-[70%] w-full md:mx-auto mt-10  flex flex-col items-center justify-center h-full">
+        <h1 className="text-lightgreen xl:text-[64px] lg:text-[32px] text-[28px] font-bold">
+          Daftarkan Akun
+        </h1>
+        <Typhography variant={'p'} className="mt-5 text-gray-400 mb-10">
+          Daftar akun anda dengan mengisi form dibawah
+        </Typhography>
 
-          <Typhography variant={"p"}>
-            Belum punya akun?{" "}
-            <Link href="/register" className="text-lightgreen font-bold">
-              Daftar Sekarang
-            </Link>
-          </Typhography>
-        </div>
+        <FormRegister />
+
+        <Typhography variant={'p'} className="mb-10 z-50">
+          Sudah punya akun?{" "}
+          <Link href="/login" className="text-lightgreen font-bold">
+            Login Sekarang
+          </Link>
+        </Typhography>
       </div>
-    </LayoutAuth>
+      <ShapeVector />
+    </div>
   );
 }

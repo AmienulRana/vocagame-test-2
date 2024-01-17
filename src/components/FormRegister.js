@@ -33,7 +33,7 @@ export default function FormRegister() {
     toast.success("Register Berhasil!");
 
     Cookies.set("userData", encryptData(newUserData), { expires: 120 / 1440 });
-    router.push("/");
+    router.push("/login");
   };
 
   return (

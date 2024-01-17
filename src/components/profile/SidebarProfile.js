@@ -8,7 +8,7 @@ export default function SidebarProfile() {
   const router = useRouter();
   const handleLogout = () => {
     Cookies.set("userSession", "", { expires: -1 });
-    router.push("/");
+    router.push("/login");
   };
   return (
     <div className="md:w-[20%] w-full md:border-r mt-5 md:mt-0 pb-10 border-gray-300 flex md:flex-col justify-between">
