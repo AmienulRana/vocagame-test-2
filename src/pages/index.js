@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <LayoutAuth>
       <div className="flex-1">
-        <div className="md:px-16 px-8 flex flex-col items-center justify-center h-full dark:bg-darkblue2 bg-gray-50">
+        <div className="md:px-16 px-8 flex flex-col items-center justify-center h-full md:dark:bg-darkblue2 dark:bg-darkblue bg-gray-50">
           <h1 className="text-lightgreen xl:text-[64px] md:text-[32px] text-[28px] font-bold">
             Silahkan Login
           </h1>
